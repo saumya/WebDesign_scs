@@ -76,12 +76,37 @@
             </div>
         </div>
         -->
-      <div class="columns" style="height: 500px;">
+      <!--
+        <div class="columns" style="height: 500px;">
         <div class="column is-full has-text-centered">
             <img src="https://picsum.photos/800/450?colours=1">
             <div>Slide show</div>
         </div>
       </div>
+      -->
+
+      <figure class="image is-16by9">
+        <!-- <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe> -->
+        <img id="img_banner" src="assets/01_home.jpg">
+      </figure>
+
+
+      <script>
+        (function(){
+          const aBanner = ['01_home.jpg', '02_home.jpg', '03_home.jpg', '04_home.jpg', '05_home.jpg', '06_home.jpg'];
+          const a = document.getElementById('img_banner');
+          let iDisplay = 0;
+          
+
+          setInterval(function(){
+            iDisplay ++;
+            if(iDisplay>=aBanner.length){
+              iDisplay = 0;
+            }
+            a.setAttribute('src', 'assets/'+aBanner[iDisplay]);
+          },6000);
+        })();
+      </script>
      
 
 </body>
